@@ -11,15 +11,6 @@ const StackLayout = () =>{
             name="itemDetail"
             options={{headerTitle:"Ticket Details",headerShown: true}}
             />
-            {/* 
-                   <Stack.Screen
-            name="productos"
-            options={{headerTitle:"Productos",headerShown: true}}
-            />
-                <Stack.Screen
-            name="notifications"
-            options={{headerTitle:"Notifications",headerShown: true}}
-            /> */}
         </Stack>
     )
 }

@@ -68,7 +68,6 @@ export default function HomeScreen() {
       if (error.response && error.response.status === 401) {
         console.error('Error occurred:', error.message);
       } else {
-        // Handle other errors
         console.error('Error occurred:', error.message);
       }
     }
@@ -80,7 +79,7 @@ export default function HomeScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
       <Text style={{fontSize:25,fontWeight:'500'}}>Create a Ticket</Text>
-      <KeyboardAwareScrollView style={{marginTop:10}}>
+      <KeyboardAwareScrollView >
         <Formik
           initialValues={{ name: '', email: '', image: '', description: '' }}
           validationSchema={validationSchema}
@@ -117,7 +116,7 @@ export default function HomeScreen() {
 
               <Text style={styles.label}>Description:</Text>
               <TextInput
-                style={[styles.input, touched.description && errors.description ? styles.inputError : null]}
+                style={[styles.input,{height:80}, touched.description && errors.description ? styles.inputError : null]}
                 placeholder="Description"
                 onChangeText={handleChange('description')}
                 onBlur={handleBlur('description')}

@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.abimaelfrancotorres.zealthydemo"
     },
     "android": {
       "adaptiveIcon": {
@@ -33,14 +34,14 @@
     "plugins": [
       "expo-router",
       "expo-image-picker",
-        [
-          "expo-build-properties",
-          {
-            "android": {
-              "usesCleartextTraffic": true
-            }
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
           }
-        ]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
@@ -52,6 +53,12 @@
       "eas": {
         "projectId": "4090476b-0772-4cde-afc1-c3e37dd22b91"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4090476b-0772-4cde-afc1-c3e37dd22b91"
     }
   }
 }
